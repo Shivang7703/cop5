@@ -5,7 +5,7 @@
 	<title>Metal Powder, Atomized Powder Manufacturers, Suppliers and Exporters in India</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	<style>
 		/* Style for the sliding section */
 		.sliding-section {
@@ -62,37 +62,114 @@ function selectOption(option) {
 				<img class="logo" src="css\logo1.png">
 				<div class="menu">
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About Us</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About Us</a></li>
 						<li>
 							<div class="dropdown">
-								<button class="dropdown-btn" onmouseover="toggleDropdown('ProList')">Product</button>
+								<button class="dropdown-btn" >Product</button>
 								<ul class="dropdown-content" id="ProList">
-									<li>Tungsten Heavy Alloys</li>
-									<li>Copper Powder</li>
-									<li>Bronze Powder</li>
-									<li>Brass Powder</li>
-									<li>Tin Powders</li>
-									<li>Nickel and Alloy Powders</li>
-									<li>Diamond Tool Matrix Powders</li>
-									<li>Tool Steel and Stainless Steel Powders</li>
-									<li>Zinc Powders</li>
+									<li><a href="Tung.html">Tungsten Heavy Alloys</a></li>
+									<div class="row">
+										<div >
+											<li>
+											<a id="alloy">Alloy Powders</a>
+											<button id="but1"><img src="images/down-arrow.png" style="background: black;"></button>
+										</li>
+										</div>
+									</div>
+									
+									<div class="dropdown-sub" id="alloy-list">
+										<li><a>Copper Powder</a>
+											<button id="but2"><img src="images/down-arrow.png" style="background: black;"></button>
+
+										</li>
+										<div class="dropdown-sub" id="cop">
+											<li><a href="Cu-325.html">Cu-325</a></li>
+											<li><a href="Cu-100.html">Cu-100/+240</a></li>
+											<li><a href="LowAd.html">Low Ad Cu-200</a></li>
+										</div>
+										<li><a>Bronze Powder</a>
+										<button id="but3"><img src="images/down-arrow.png" style="background: black;"></button>
+
+										</li>
+										<div class="dropdown-sub" id="bronze">
+											<li><a href="Bronze80.html">Bronze 80/20-325</a></li>
+											<li><a href="Brinze85.html">Bronze 85/15-325</a></li>
+											<li><a href="Bronze90.html">Bronze 90/10-325</a></li>
+										</div>
+										<li><a>Brass Powder</a>
+											<button id="but4"><img src="images/down-arrow.png" style="background: black;"></button>
+
+										</li>
+										<div class="dropdown-sub" id="brass">
+											<li><a href="Brass70.html">Brass 70/30-325</a></li>
+											<li><a href="Brass60.html">Brass 60/40-325</a></li>
+										</div>
+										<li><a>Tin Powders</a>
+											<button id="but5"><img src="images/down-arrow.png" style="background: black;"></button>
+
+										</li>
+										<div class="dropdown-sub" id="tin">
+											<li><a href="Sn-325.html">Sn-325</a></li>
+										</div>
+										<li><a>Nickel and Alloy Powders</a>
+											<button id="but6"><img src="images/down-arrow.png" style="background: black;"></button>
+
+										</li>
+										<div class="dropdown-sub" id="nic">
+											<li><a href="Ni-325.html">Ni-325</a></li>
+											<li><a href="Ni-Cr.html">Ni-Cr 80/20</a></li>
+											<li><a href="Nibased.html">Ni based Boron alloy</a></li>
+										</div>
+										<li><a>Diamond Tool Matrix Powders</a>
+											<button id="but7"><img src="images/down-arrow.png" style="background: black;"></button>
+								
+										</li>
+										<div class="dropdown-sub" id="dia">
+											<li><a href="Fe-Cu70.html">Fe-Cu 70/30</a></li>
+											<li><a href="Fe-Cu60.html">Fe-Cu 60/40</a></li>
+											<li><a href="Diabond.html">Diabond</a></li>
+											<li><a href="DiabondG.html">Diabond Gold</a></li>
+											<li><a href="Iron.html">Iron Phosphorous</a></li>
+											<li><a href="NickelSil.html">Nickel silver - Cu-Ni-Zn alloy</a></li>
+											<li><a href="Cu-Ni-Sn.html">Cu-Ni-Sn alloy</a></li>
+											<li><a href="CopperP.html">Copper Phosphorous</a></li>
+										</div>
+										<li><a>Tool Steel and Stainless Steel Powders</a>
+											<button id="but8"><img src="images/down-arrow.png" style="background: black;"></button>
+
+										</li>
+										<div class="dropdown-sub" id="tool">
+											<li><a href="SS316L.html">SS 316L</a></li>
+											<li><a href="SS304.html">SS 304</a></li>
+											<li><a href="SS410L.html">SS 410L</a></li>
+											<li><a href="M3.html">M 3/2</a></li>
+											<li><a href="T-15.html">T-15</a></li>
+										</div>
+										<li><a>Zinc Powders</a>
+											<button id="but9"><img src="images/down-arrow.png" style="background: black;"></button>
+
+										</li>
+										<div class="dropdown-sub" id="zinc">
+											<li><a href="ZincDust.html">Zinc Dust</a></li>
+										</div>
+									</div>
 								</ul>
 						    </div>
 						</li>
-						<li><a href="#">R&D</a></li>
+						<li><a href="r&d.html">R&D</a></li>
 						<li>
 							<div class="dropdown">
 								<button class="dropdown-btn" onmouseover="toggleDropdown('othList')">Others</button>
 								<ul class="dropdown-content" id="othList">
-								<li>Facilities</li>
-								<li>Applications</li>
-								<li>Gallery</li>
-								<li>Sitemap</li>
+								<li><a href="facilities.html">Facilities</a></li>
+								<li><a href="application.html">Applications</a></li>
+								<li><a href="gallery.html">Gallery</a></li>
+								<li><a href="sitemap.html">Sitemap</a></li>
 								</ul>
 						    </div>
 						</li>
-						<li><a href="#">Contact Us</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -181,6 +258,45 @@ function selectOption(option) {
 	</div>
 
 	<script>
+
+		$("#but1").click(function(){
+			$("#alloy-list").toggle();
+		});
+
+		$(".dropdown").hover(function(){
+			$("#ProList").toggle();
+		});
+		$("#but2").click(function(){
+			$("#cop").toggle();
+		});
+
+		$("#but3").click(function(){
+			$("#bronze").toggle();
+		});
+
+		$("#but4").click(function(){
+			$("#brass").toggle();
+		});
+
+		$("#but5").click(function(){
+			$("#tin").toggle();
+		});
+
+		$("#but6").click(function(){
+			$("#nic").toggle();
+		});
+
+		$("#but7").click(function(){
+			$("#dia").toggle();
+		});
+
+		$("#but8").click(function(){
+			$("#tool").toggle();
+		});
+
+		$("#but9").click(function(){
+			$("#zinc").toggle();
+		});
 		// jQuery code to create the sliding effect
 		$(document).ready(function () {
 		  let currentIndex = 0;

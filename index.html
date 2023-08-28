@@ -6,57 +6,65 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+
 	<style>
-		/* Style for the sliding section */
 		.sliding-section {
-		  overflow: hidden;
-		  height: 500px; /* Adjust this value to your desired height */
+			overflow: hidden;
+			height: 500px;
+			/* Adjust this value to your desired height */
 		}
-	
+
 		/* Style for the content inside the sliding section */
 		.sliding-content {
-		  width: 300%; /* Three slides, so the width is 300% of the container */
-		  height: 100%;
-		  display: flex;
+			width: 300%;
+			/* Three slides, so the width is 300% of the container */
+			height: 100%;
+			display: flex;
 		}
-	
+
 		/* Style for each slide */
 		.slide {
-		  flex: 0 0 33.33%; /* Each slide occupies 33.33% of the container's width */
-		  padding: 10px;
+			flex: 0 0 33.33%;
+			/* Each slide occupies 33.33% of the container's width */
+			padding: 10px;
 		}
-	
+
 		/* Style for the images */
 		.slide img {
-		  width: 20%;
-		  height: auto;
+			width: 20%;
+			height: auto;
 		}
-	  </style>
+	</style>
 
 	<script>
 		function toggleDropdown(id) {
-    var dropdownContent = document.getElementById(id);
-    if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-    } else {
-        dropdownContent.style.display = "block";
-    }
-}
+			var dropdownContent = document.getElementById(id);
+			if (dropdownContent.style.display === "block") {
+				dropdownContent.style.display = "none";
+			} else {
+				dropdownContent.style.display = "block";
+			}
+		}
 
-function selectOption(option) {
-    var dropdownBtn = document.querySelector(".dropdown-btn");
-    dropdownBtn.textContent = option;
-    var dropdownContent = document.getElementById("dropdownList");
-    dropdownContent.style.display = "none";
-}
+		function selectOption(option) {
+			var dropdownBtn = document.querySelector(".dropdown-btn");
+			dropdownBtn.textContent = option;
+			var dropdownContent = document.getElementById("dropdownList");
+			dropdownContent.style.display = "none";
+		}
 	</script>
 </head>
 
 <body>
 
 	<div class="wrapper">
-
 		<div class="slide1">
+
 			<div class="header">
 				<img class="logo" src="logo.png">
 				<img class="logo" src="css\logo1.png">
@@ -65,7 +73,7 @@ function selectOption(option) {
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About Us</a></li>
 						<li>
-							<div class="dropdown">
+							<div class="dropdown" id="product">
 								<button class="dropdown-btn" >Product</button>
 								<ul class="dropdown-content" id="ProList">
 									<li><a href="Tung.html">Tungsten Heavy Alloys</a></li>
@@ -157,10 +165,11 @@ function selectOption(option) {
 								</ul>
 						    </div>
 						</li>
+						
 						<li><a href="r&d.html">R&D</a></li>
 						<li>
-							<div class="dropdown">
-								<button class="dropdown-btn" onmouseover="toggleDropdown('othList')">Others</button>
+							<div class="dropdown" id="Others">
+								<button class="dropdown-btn" >Others</button>
 								<ul class="dropdown-content" id="othList">
 								<li><a href="facilities.html">Facilities</a></li>
 								<li><a href="application.html">Applications</a></li>
@@ -189,33 +198,33 @@ function selectOption(option) {
 				</div>
 				<div class="sliding-section">
 					<div class="sliding-content">
-					  <!-- Slide 1 -->
-					  <div class="slide">
-						<img src="images\innotung.png" alt="Image 1" style="width: 100%;">
-						<p>Content Slide 1</p>
-					  </div>
-				
-					  <!-- Slide 2 -->
-					  <div class="slide">
-						<img src="images\balance-weight.jpg" alt="Image 2" style="width: 100%;">
-						<p>Content Slide 2</p>
-					  </div>
-				
-					  <!-- Slide 3 -->
-					  <div class="slide">
-						<img src="images\camera-body1.jpg" alt="Image 3" style="width: 100%;">
-						<p>Content Slide 3</p>
-					  </div>
+						<!-- Slide 1 -->
+						<div class="slide">
+							<img src="images\innotung.png" alt="Image 1" style="width: 100%;">
+							<p>Content Slide 1</p>
+						</div>
 
-					  <div class="slide">
-						<img src="images\camera-body2.jpg" alt="Image 3" style="width: 100%;">
-						<p>Content Slide 3</p>
-					  </div>
-					  <!-- You can add more slides as needed -->
+						<!-- Slide 2 -->
+						<div class="slide">
+							<img src="images\balance-weight.jpg" alt="Image 2" style="width: 100%;">
+							<p>Content Slide 2</p>
+						</div>
+
+						<!-- Slide 3 -->
+						<div class="slide">
+							<img src="images\camera-body1.jpg" alt="Image 3" style="width: 100%;">
+							<p>Content Slide 3</p>
+						</div>
+
+						<div class="slide">
+							<img src="images\camera-body2.jpg" alt="Image 3" style="width: 100%;">
+							<p>Content Slide 3</p>
+						</div>
+						<!-- You can add more slides as needed -->
 					</div>
-				  </div>
+				</div>
 			</div>
-			
+
 			<p class="content-desc">
 				We are a global manufacturer and supplier of ferrous and non-ferrous metal/alloy powders, including
 				Copper, Bronze, Stainless Steel, Nickel, Tin, Brass, and Diamond Tool Matrix Powders. Our product range
@@ -224,17 +233,17 @@ function selectOption(option) {
 				customer success, we prioritize quality, consistency, and timely delivery. Our experienced technical
 				team focuses on R&D to offer customized solutions and advanced technology to the powder metallurgy
 				community.
-				<div class="skill-img">
-					<a href="css\iso-certificate-padmasree.pdf" target="_blank">
-						<img src="css/WhatsApp Image 2023-07-29 at 20.05.36.jpg" width=75px height=500px></a>
-				</div>
+			<div class="skill-img">
+				<a href="css\iso-certificate-padmasree.pdf" target="_blank">
+					<img src="css/WhatsApp Image 2023-07-29 at 20.05.36.jpg" width=75px height=500px></a>
+			</div>
 			</p>
 
-			</div>
 		</div>
 	</div>
+	</div>
 
-	
+
 
 	<div class="footer">
 		<div class="Terms">
@@ -245,13 +254,13 @@ function selectOption(option) {
 		</div>
 
 		<div class="icons">
-		<p>
-			<a href="#"><img src="images/social1.png"></a>
-			<a href="#"><img src="images/social2.png"></a>
-			<a href="#"><img src="images/social3.png"></a>
-			<a href="#"><img src="images/social4.png"></a>
-		</p>
-	</div>
+			<p>
+				<a href="#"><img src="images/social1.png"></a>
+				<a href="#"><img src="images/social2.png"></a>
+				<a href="#"><img src="images/social3.png"></a>
+				<a href="#"><img src="images/social4.png"></a>
+			</p>
+		</div>
 		<div class="copy">
 			<p>&copy; Copyright © 2019 Innomet Powders, All Rights Reserved.</p>
 		</div>
@@ -259,70 +268,73 @@ function selectOption(option) {
 
 	<script>
 
-		$("#but1").click(function(){
+		$("#but1").click(function () {
 			$("#alloy-list").toggle();
 		});
 
-		$(".dropdown").hover(function(){
+		$("#product").hover(function () {
 			$("#ProList").toggle();
 		});
-		$("#but2").click(function(){
+		$("#but2").click(function () {
 			$("#cop").toggle();
 		});
 
-		$("#but3").click(function(){
+		$("#but3").click(function () {
 			$("#bronze").toggle();
 		});
 
-		$("#but4").click(function(){
+		$("#but4").click(function () {
 			$("#brass").toggle();
 		});
 
-		$("#but5").click(function(){
+		$("#but5").click(function () {
 			$("#tin").toggle();
 		});
 
-		$("#but6").click(function(){
+		$("#but6").click(function () {
 			$("#nic").toggle();
 		});
 
-		$("#but7").click(function(){
+		$("#but7").click(function () {
 			$("#dia").toggle();
 		});
 
-		$("#but8").click(function(){
+		$("#but8").click(function () {
 			$("#tool").toggle();
 		});
 
-		$("#but9").click(function(){
+		$("#but9").click(function () {
 			$("#zinc").toggle();
+		});
+		$("#Others").hover(function () {
+			$("#othList").toggle();
 		});
 		// jQuery code to create the sliding effect
 		$(document).ready(function () {
-		  let currentIndex = 0;
-		  const slideWidth = $(".sliding-content").width() / 3; // Divide by the number of slides
-		  const slideCount = $(".sliding-content div").length;
-	
-		  function slideToIndex(index) {
-			$(".sliding-content").animate({
-			  marginLeft: -index * slideWidth,
-			}, 500);
-		  }
-	
-		  function nextSlide() {
-			currentIndex = (currentIndex + 1) % slideCount;
-			slideToIndex(currentIndex);
-		  }
-	
-		  function prevSlide() {
-			currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-			slideToIndex(currentIndex);
-		  }
-	
-		  // Automatically move to the next slide every 3 seconds (adjust the time as needed)
-		  setInterval(nextSlide, 2000);
+			let currentIndex = 0;
+			const slideWidth = $(".sliding-content").width() / 3; // Divide by the number of slides
+			const slideCount = $(".sliding-content div").length;
+
+			function slideToIndex(index) {
+				$(".sliding-content").animate({
+					marginLeft: -index * slideWidth,
+				}, 500);
+			}
+
+			function nextSlide() {
+				currentIndex = (currentIndex + 1) % slideCount;
+				slideToIndex(currentIndex);
+			}
+
+			function prevSlide() {
+				currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+				slideToIndex(currentIndex);
+			}
+
+			// Automatically move to the next slide every 3 seconds (adjust the time as needed)
+			setInterval(nextSlide, 2000);
 		});
-	  </script>
+	</script>
 
 </body>
 

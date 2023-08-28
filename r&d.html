@@ -65,7 +65,7 @@ function selectOption(option) {
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About Us</a></li>
 						<li>
-							<div class="dropdown">
+							<div class="dropdown" id="product">
 								<button class="dropdown-btn" onmouseover="toggleDropdown('ProList')">Product</button>
 								<ul class="dropdown-content" id="ProList">
 									<li><a href="Tung.html">Tungsten Heavy Alloys</a></li>
@@ -159,8 +159,8 @@ function selectOption(option) {
 						</li>
 						<li><a href="r&d.html">R&D</a></li>
 						<li>
-							<div class="dropdown">
-								<button class="dropdown-btn" onmouseover="toggleDropdown('othList')">Others</button>
+							<div class="dropdown" id="Others">
+								<button class="dropdown-btn" >Others</button>
 								<ul class="dropdown-content" id="othList">
 									<li><a href="facilities.html">Facilities</a></li>
 									<li><a href="application.html">Applications</a></li>
@@ -262,7 +262,7 @@ function selectOption(option) {
 			$("#alloy-list").toggle();
 		});
 
-		$(".dropdown").hover(function(){
+		$("#product").hover(function(){
 			$("#ProList").toggle();
 		});
 		$("#but2").click(function(){
@@ -295,6 +295,9 @@ function selectOption(option) {
 
 		$("#but9").click(function(){
 			$("#zinc").toggle();
+		});
+		$("#Others").click(function(){
+			$("#othList").toggle();
 		});
 		// jQuery code to create the sliding effect
 		$(document).ready(function () {

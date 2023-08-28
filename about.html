@@ -3,7 +3,7 @@
 
 <head>
 	<title>Metal Powder, Atomized Powder Manufacturers, Suppliers and Exporters in India</title>
-	<link rel="stylesheet" type="text/css" href="css/about.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 	<style>
@@ -65,8 +65,8 @@ function selectOption(option) {
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About Us</a></li>
 						<li>
-							<div class="dropdown">
-								<button class="dropdown-btn" onmouseover="toggleDropdown('ProList')">Product</button>
+							<div class="dropdown" id="product">
+								<button class="dropdown-btn" >Product</button>
 								<ul class="dropdown-content" id="ProList">
 									<li><a href="Tung.html">Tungsten Heavy Alloys</a></li>
 									<div class="row">
@@ -157,15 +157,16 @@ function selectOption(option) {
 								</ul>
 						    </div>
 						</li>
+						
 						<li><a href="r&d.html">R&D</a></li>
 						<li>
-							<div class="dropdown">
-								<button class="dropdown-btn" onmouseover="toggleDropdown('othList')">Others</button>
+							<div class="dropdown" id="Others">
+								<button class="dropdown-btn" >Others</button>
 								<ul class="dropdown-content" id="othList">
-									<li><a href="facilities.html">Facilities</a></li>
-									<li><a href="application.html">Applications</a></li>
-									<li><a href="gallery.html">Gallery</a></li>
-									<li><a href="sitemap.html">Sitemap</a></li>
+								<li><a href="facilities.html">Facilities</a></li>
+								<li><a href="application.html">Applications</a></li>
+								<li><a href="gallery.html">Gallery</a></li>
+								<li><a href="sitemap.html">Sitemap</a></li>
 								</ul>
 						    </div>
 						</li>
@@ -263,43 +264,46 @@ function selectOption(option) {
 	</div>
 
 	<script>
-		$("#but1").click(function(){
+		$("#but1").click(function () {
 			$("#alloy-list").toggle();
 		});
 
-		$(".dropdown").hover(function(){
+		$("#product").hover(function () {
 			$("#ProList").toggle();
 		});
-		$("#but2").click(function(){
+		$("#but2").click(function () {
 			$("#cop").toggle();
 		});
 
-		$("#but3").click(function(){
+		$("#but3").click(function () {
 			$("#bronze").toggle();
 		});
 
-		$("#but4").click(function(){
+		$("#but4").click(function () {
 			$("#brass").toggle();
 		});
 
-		$("#but5").click(function(){
+		$("#but5").click(function () {
 			$("#tin").toggle();
 		});
 
-		$("#but6").click(function(){
+		$("#but6").click(function () {
 			$("#nic").toggle();
 		});
 
-		$("#but7").click(function(){
+		$("#but7").click(function () {
 			$("#dia").toggle();
 		});
 
-		$("#but8").click(function(){
+		$("#but8").click(function () {
 			$("#tool").toggle();
 		});
 
-		$("#but9").click(function(){
+		$("#but9").click(function () {
 			$("#zinc").toggle();
+		});
+		$("#Others").hover(function () {
+			$("#othList").toggle();
 		});
 		// jQuery code to create the sliding effect
 		$(document).ready(function () {

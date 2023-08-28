@@ -3,7 +3,7 @@
 
 <head>
 	<title>Metal Powder, Atomized Powder Manufacturers, Suppliers and Exporters in India</title>
-	<link rel="stylesheet" type="text/css" href="css/about.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 	<style>
@@ -29,7 +29,7 @@
 		/* Style for the images */
 		.slide img {
 		  width: 20%;
-		  height: auto;
+		  height: 400;
 		}
 	  </style>
 
@@ -65,8 +65,8 @@ function selectOption(option) {
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About Us</a></li>
 						<li>
-							<div class="dropdown">
-								<button class="dropdown-btn" onmouseover="toggleDropdown('ProList')">Product</button>
+							<div class="dropdown" id="product">
+								<button class="dropdown-btn" >Product</button>
 								<ul class="dropdown-content" id="ProList">
 									<li><a href="Tung.html">Tungsten Heavy Alloys</a></li>
 									<div class="row">
@@ -157,15 +157,16 @@ function selectOption(option) {
 								</ul>
 						    </div>
 						</li>
+						
 						<li><a href="r&d.html">R&D</a></li>
 						<li>
-							<div class="dropdown">
-								<button class="dropdown-btn" onmouseover="toggleDropdown('othList')">Others</button>
+							<div class="dropdown" id="Others">
+								<button class="dropdown-btn" >Others</button>
 								<ul class="dropdown-content" id="othList">
-									<li><a href="facilities.html">Facilities</a></li>
-									<li><a href="application.html">Applications</a></li>
-									<li><a href="gallery.html">Gallery</a></li>
-									<li><a href="sitemap.html">Sitemap</a></li>
+								<li><a href="facilities.html">Facilities</a></li>
+								<li><a href="application.html">Applications</a></li>
+								<li><a href="gallery.html">Gallery</a></li>
+								<li><a href="sitemap.html">Sitemap</a></li>
 								</ul>
 						    </div>
 						</li>
@@ -215,6 +216,42 @@ function selectOption(option) {
 					</div>
 				  </div>
 			</div>
+			<div class="content" align = "center">
+				<table height="400" border="2" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFCC66" class="Text">
+					<tbody><tr>
+					  <td width="400"><p align="center">Specification No.</p></td>
+					  <td width="400"><p align="center">IP 11001</p></td>
+					</tr>
+					<tr>
+					  <td width="400"><p align="center">Purity</p></td>
+					  <td width="400"><p align="center">Cu: 99.5 % min.</p></td>
+					</tr>
+					<tr>
+					  <td width="400"><p align="center">Size</p></td>
+					  <td width="400"><p align="center">- 325 # (45 microns)</p></td>
+					</tr>
+					<tr>
+					  <td width="400" rowspan="2"><p align="center">Sieve analysis</p></td>
+					  <td width="400"><p align="center">&gt;45µm: 5% max.</p></td>
+					</tr>
+					<tr>
+					  <td width="400"><p align="center">&gt;25µm: 40-60 %</p></td>
+					</tr>
+					<tr>
+					  <td width="400"><p align="center">Shape</p></td>
+					  <td width="400"><p align="center">Irregular</p></td>
+					</tr>
+					<tr>
+					  <td width="400"><p align="center">Apparent density</p></td>
+					  <td width="400"><p align="center">3.0 - 4.0 g/cc</p></td>
+					</tr>
+					<tr>
+					  <td width="400"><p align="center">Oxygen Content<br>
+						(Hydrogen Loss) </p></td>
+					  <td width="400"><p align="center">0.35 % max.</p></td>
+					</tr>
+				  </tbody></table>
+			</div>
 			
 			<p class="content-desc">
 				We are a global supplier and manufacturer of ferrous and non-ferrous metal/alloy powders, including Copper, Bronze, Stainless Steel, Nickel, and more. Our expertise extends to high-temperature sintering processes, specializing in Tungsten Heavy Alloy Components (Inno Tung). Serving diverse industries such as Powder Metallurgy, Diamond tools, Coatings, and more, we aim for self-reliance through innovative research and development.<br><br>
@@ -263,43 +300,46 @@ function selectOption(option) {
 	</div>
 
 	<script>
-		$("#but1").click(function(){
+		$("#but1").click(function () {
 			$("#alloy-list").toggle();
 		});
 
-		$(".dropdown").hover(function(){
+		$("#product").hover(function () {
 			$("#ProList").toggle();
 		});
-		$("#but2").click(function(){
+		$("#but2").click(function () {
 			$("#cop").toggle();
 		});
 
-		$("#but3").click(function(){
+		$("#but3").click(function () {
 			$("#bronze").toggle();
 		});
 
-		$("#but4").click(function(){
+		$("#but4").click(function () {
 			$("#brass").toggle();
 		});
 
-		$("#but5").click(function(){
+		$("#but5").click(function () {
 			$("#tin").toggle();
 		});
 
-		$("#but6").click(function(){
+		$("#but6").click(function () {
 			$("#nic").toggle();
 		});
 
-		$("#but7").click(function(){
+		$("#but7").click(function () {
 			$("#dia").toggle();
 		});
 
-		$("#but8").click(function(){
+		$("#but8").click(function () {
 			$("#tool").toggle();
 		});
 
-		$("#but9").click(function(){
+		$("#but9").click(function () {
 			$("#zinc").toggle();
+		});
+		$("#Others").hover(function () {
+			$("#othList").toggle();
 		});
 		// jQuery code to create the sliding effect
 		$(document).ready(function () {
@@ -323,7 +363,7 @@ function selectOption(option) {
 			slideToIndex(currentIndex);
 		  }
 	
-		  // Automatically move to the next slide every 3 seconds (adjust the time as needed)
+		  // 400matically move to the next slide every 3 seconds (adjust the time as needed)
 		  setInterval(nextSlide, 2000);
 		});
 	  </script>
